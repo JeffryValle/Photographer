@@ -1,11 +1,40 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import Image from "astro/components/Image.astro";
+import imagen1 from "../assets/pixels.jpg";
+import CardSection from "../layouts/CardSection.astro";
 ---
 
 <Layout>
-	<Welcome />
+	<div class="hero">
+		<Image
+			src={imagen1}
+			alt="Hero"
+			class="hero-image"
+			fetchpriority="high"
+		/>
+		<div class="hero-content">
+			<h1 class="pb-12">Visual Storyteller</h1>
+
+			<button
+				class="cursor-pointer px-3 rounded-md text-shadow-white tracking-wider shadow-xl animate-bounce hover:animate-none"
+			>
+				<svg
+					class="w-8 h-8"
+					stroke="currentColor"
+					stroke-width="2"
+					viewBox="0 0 24 24"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3"
+						stroke-linejoin="round"
+						stroke-linecap="round"></path>
+				</svg>
+			</button>
+		</div>
+	</div>
+
+	<CardSection />
 </Layout>

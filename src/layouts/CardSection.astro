@@ -1,0 +1,25 @@
+---
+import ImageCard from "../components/ImageCard.astro";
+import imagen1 from "../assets/imagen1.jpg";
+import imagen2 from "../assets/imagen2.jpg";
+import imagen3 from "../assets/imagen3.jpg";
+import imagen4 from "../assets/imagen4.jpg";
+---
+
+<section class="w-full h-180 bg-[#0f0f0f]">
+    <div class="h-24 w-full flex justify-center items-center"></div>
+    <div class="w-full h-120 flex justify-center items-center gap-4">
+        <div class="bg-red-50 w-85 h-120 flex justify-center items-center">
+            <ImageCard imagen={imagen1} title="Portraits" url="/portraits" />
+        </div>
+        <div class="bg-amber-900 w-85 h-120">
+            <ImageCard imagen={imagen2} title="Landscapes" url="/landscapes" />
+        </div>
+        <div class="bg-indigo-500 w-85 h-120">
+            <ImageCard imagen={imagen3} title="Wildlife" url="/wildlife" />
+        </div>
+        <div class="bg-green-700 w-85 h-120">
+            <ImageCard imagen={imagen4} title="Urban" url="/urban" />
+        </div>
+    </div>
+</section>
