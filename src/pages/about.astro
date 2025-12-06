@@ -1,0 +1,39 @@
+---
+import Layout from "../layouts/Layout.astro";
+import imagen1 from "../assets/profile.jpg";
+import SocialMediaComponent from "../components/SocialMediaComponent.astro";
+---
+
+<Layout>
+    <div class="h-full w-full bg-black">
+        <div class="h-65 w-full flex flex-col items-center justify-end">
+            <h1 class="text-white">About</h1>
+            <h2 class="text-white">A collection of moments</h2>
+        </div>
+
+        <div class="w-full h-220">
+            <div class="h-180 w-full flex items-center justify-center">
+                <div class="flex h-160 w-400 items-center justify-center gap-8">
+                    <img src={imagen1.src} alt="About" class="w-100" />
+                    <div class="ml-8 text-white">
+                        <p class="text-3xl">Photographer profile</p>
+                        <br />
+                        <p class="text-xl text-[#a8a7a7]">Visual storyteller</p>
+                        <br />
+                        <p class="text-wrap mt-4 w-80 text-xl">
+                            Passionate about capturing the beauty of the world
+                            through my lens. Specializing in landscapes,
+                            wildlife, and portraits, I strive to tell stories
+                            that resonate and inspire.
+                        </p>
+                        <div
+                            class="w-80 h-20 flex items-center justify-start mt-4"
+                        >
+                            <SocialMediaComponent />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</Layout>
