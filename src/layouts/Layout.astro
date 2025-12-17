@@ -18,11 +18,41 @@ import Navigation from "./Navigation.astro";
 		/>
 		<meta name="generator" content={Astro.generator} />
 		<title>Photographer</title>
-		<script src="https://cdn.tailwindcss.com"></script>
 	</head>
 	<body>
 		<Navigation />
 		<slot />
 		<Footer />
+
+		<script is:inline>
+			// Registrar Service Worker
+			if ("serviceWorker" in navigator) {
+				window.addEventListener("load", () => {
+					navigator.serviceWorker
+						.register("/sw.js")
+						.then((registration) => {
+							console.log(
+								"Service Worker registrado:",
+								registration,
+							);
+						})
+						.catch((err) => {
+							console.log(
+								"Error al registrar Service Worker:",
+								err,
+							);
+						});
+				});
+
+				// Limpiar caché al cerrar la pestaña/navegador
+				window.addEventListener("beforeunload", () => {
+					if (navigator.serviceWorker.controller) {
+						navigator.serviceWorker.controller.postMessage(
+							"clearCache",
+						);
+					}
+				});
+			}
+		</script>
 	</body>
 </html>
