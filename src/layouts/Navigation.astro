@@ -16,9 +16,9 @@
 
             <!-- Desktop / Tablet Menu (visible from sm and up) -->
             <div
-                class="hidden sm:flex sm:items-center sm:space-x-4
-               md:space-x-8 md:text-base
-               lg:space-x-12 lg:text-lg font-bold"
+                class="hidden sm:flex sm:items-center sm:space-x-4 sm:gap-4 sm:text-lg
+               md:space-x-8 md:gap-4 md:text-lg
+               lg:space-x-12 lg:text-lg font-bold lg:gap-8"
             >
                 <a href="/" class="text-white hover:text-gray-200 transition"
                     >Work</a
@@ -136,16 +136,16 @@
             btn.setAttribute("aria-expanded", String(!expanded));
 
             menu.classList.toggle("hidden");
-            iconOpen.classList.toggle("hidden");
-            iconClose.classList.toggle("hidden");
+            if (iconOpen) iconOpen.classList.toggle("hidden");
+            if (iconClose) iconClose.classList.toggle("hidden");
         });
 
         // Opcional: cerrar menu si cambia el tamaño de pantalla (por ejemplo al pasar a desktop)
         window.addEventListener("resize", () => {
             if (window.innerWidth >= 640) {
                 menu.classList.add("hidden");
-                iconOpen.classList.remove("hidden");
-                iconClose.classList.add("hidden");
+                if (iconOpen) iconOpen.classList.remove("hidden");
+                if (iconClose) iconClose.classList.add("hidden");
                 btn.setAttribute("aria-expanded", "false");
             }
         });

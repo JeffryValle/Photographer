@@ -7,18 +7,25 @@ import imagen4 from "../assets/imagen4.jpg";
 ---
 
 <section class="w-full h-180 bg-[#070707]">
-    <div class="h-24 w-full flex justify-center items-center"></div>
-    <div class="w-full h-120 flex justify-center items-center gap-4">
-        <div class="bg-red-50 w-85 h-120 flex justify-center items-center">
+    <div class="h-24 w-full flex justify-center items-center">
+        <h2 class="text-3xl text-white font-semibold">Explore Categories</h2>
+    </div>
+    <div
+        class="sm:w-full sm:h-480 sm:place-items-center sm:gap-4 sm:grid sm:grid-cols-1 sm:grid-rows-4
+                md:w-full md:h-240 md:place-items-center md:gap-4 md:grid md:grid-cols-2 md:grid-rows-2
+                lg:w-full lg:h-240 lg:place-items-center lg:gap-4 lg:grid lg:grid-cols-3 lg: lg:grid-rows-2
+                xl:w-full xl:h-120 xl:justify-center xl:items-center xl:gap-4 xl:grid xl:grid-cols-4 xl:grid-rows-1"
+    >
+        <div class="bg-red-50 w-75 h-90 flex justify-center items-center">
             <ImageCard imagen={imagen1} title="Portraits" url="/portraits" />
         </div>
-        <div class="bg-amber-900 w-85 h-120">
+        <div class="bg-amber-900 w-75 h-90">
             <ImageCard imagen={imagen2} title="Landscapes" url="/landscapes" />
         </div>
-        <div class="bg-indigo-500 w-85 h-120">
+        <div class="bg-indigo-500 w-75 h-90">
             <ImageCard imagen={imagen3} title="Wildlife" url="/wildlife" />
         </div>
-        <div class="bg-green-700 w-85 h-120">
+        <div class="bg-green-700 w-75 h-90">
             <ImageCard imagen={imagen4} title="Urban" url="/urban" />
         </div>
     </div>
