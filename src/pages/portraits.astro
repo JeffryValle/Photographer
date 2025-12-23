@@ -5,7 +5,12 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-    <div class="h-auto w-full bg-black pb-70">
+    <div
+        class="min-h-screen w-full bg-black pb-70
+                md:h-full md:w-full
+                lg:h-full lg:w-full
+                xl:h-auto xl:w-full"
+    >
         <div class="h-65 w-full flex flex-col items-center justify-end">
             <h3 class="text-white">2025</h3>
             <h1 class="text-white">Portraits</h1>
@@ -14,7 +19,7 @@ import Layout from "../layouts/Layout.astro";
             </h2>
         </div>
 
-        <div class="w-full h-220">
+        <div class="w-full">
             <div class="h-10 w-full"></div>
             <PortraitsSection />
         </div>

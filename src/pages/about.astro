@@ -11,9 +11,18 @@ import SocialMediaComponent from "../components/SocialMediaComponent.astro";
             <h2 class="text-white">A collection of moments</h2>
         </div>
 
-        <div class="w-full h-220">
-            <div class="h-180 w-full flex items-center justify-center">
-                <div class="flex h-160 w-400 items-center justify-center gap-8">
+        <div
+            class="w-full min-h-[calc(100vh-420px)] flex flex-col items-center justify-center py-8
+                sm:min-h-[calc(100vh-280px)]
+                md:min-h-[calc(100vh-380px)]"
+        >
+            <div class="h-160 w-full flex items-center justify-center">
+                <div
+                    class="flex items-center justify-center gap-8
+                            h-160 w-400
+                            sm:flex-col sm:h-auto sm:w-80
+                            md:flex-row"
+                >
                     <img src={imagen1.src} alt="About" class="w-100" />
                     <div class="ml-8 text-white">
                         <p class="text-3xl">Photographer profile</p>
