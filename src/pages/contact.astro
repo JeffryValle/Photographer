@@ -5,7 +5,7 @@ import Layout from "../layouts/Layout.astro";
 <Layout>
     <div class="min-h-[calc(100vh-10vh)] w-full bg-black">
         <div
-            class="min-h-[calc(100vh-120px)] w-full flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 py-16 sm:py-24"
+            class="min-h-[calc(100vh-80px)] w-full flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 py-16 sm:py-24"
         >
             <h1
                 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white tracking-tight"
@@ -74,7 +74,10 @@ import Layout from "../layouts/Layout.astro";
                             24-48 hours.
                         </p>
 
-                        <div class="space-y-6 sm:space-y-8 text-gray-300">
+                        <div
+                            class="space-y-6 sm:space-y-8 text-gray-300
+                                flex flex-col gap-6"
+                        >
                             <br />
                             <br />
                             <div class="flex items-start gap-3">
@@ -101,7 +104,7 @@ import Layout from "../layouts/Layout.astro";
 
                             <div class="flex items-start gap-3">
                                 <svg
-                                    class="w-6 h-6 mt-1 text-white flex-shrink-0"
+                                    class="w-6 h-6 mt-1 text-white shrink-0"
                                     fill="none"
                                     stroke="currentColor"
                                     viewBox="0 0 24 24"
@@ -128,7 +131,7 @@ import Layout from "../layouts/Layout.astro";
 
                             <div class="flex items-start gap-3">
                                 <svg
-                                    class="w-6 h-6 mt-1 text-white flex-shrink-0"
+                                    class="w-6 h-6 mt-1 text-white shrink-0"
                                     fill="none"
                                     stroke="currentColor"
                                     viewBox="0 0 24 24"

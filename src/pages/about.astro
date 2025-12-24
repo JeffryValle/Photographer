@@ -6,19 +6,24 @@ import SocialMediaComponent from "../components/SocialMediaComponent.astro";
 
 <Layout>
     <div class="h-auto w-full bg-black">
-        <div class="h-65 w-full flex flex-col items-center justify-end">
+        <div
+            class="h-80 w-full flex flex-col items-center justify-end
+                    sm:h-60 sm:w-full sm:flex sm:flex-col sm:items-center sm:justify-end
+                    md:h-60 md:w-full md:flex md:flex-col md:items-center md:justify-end
+                    lg:h-60 lg:w-full lg:flex lg:flex-col lg:items-center lg:justify-end"
+        >
             <h1 class="text-white">About</h1>
             <h2 class="text-white">A collection of moments</h2>
         </div>
 
         <div
-            class="w-full min-h-[calc(100vh-420px)] flex flex-col items-center justify-center py-8
+            class="w-full min-h-[calc(100vh-130px)] flex flex-col items-center justify-center py-8
                 sm:min-h-[calc(100vh-280px)]
                 md:min-h-[calc(100vh-380px)]"
         >
-            <div class="h-160 w-full flex items-center justify-center">
+            <div class="h-60 w-full flex items-center justify-center">
                 <div
-                    class="flex items-center justify-center gap-8
+                    class="flex flex-col items-center justify-center gap-8
                             h-160 w-400
                             sm:flex-col sm:h-auto sm:w-80
                             md:flex-row"
