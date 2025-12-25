@@ -6,7 +6,6 @@ export default defineConfig({
     vite: {
         plugins: [tailwindcss()],
     },
-    site: 'https://jeffryvalle.github.io',
-    base: '/Photographer/',
+    site: 'https://jeffryvalle.github.io/Photographer/',
 
 });
